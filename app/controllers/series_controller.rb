@@ -22,3 +22,7 @@ class SeriesController < ApplicationController
     params.require(:series).permit(:name, :synopsis, :director)
   end
 end
+
+def index
+  @series = Serie.all
+end

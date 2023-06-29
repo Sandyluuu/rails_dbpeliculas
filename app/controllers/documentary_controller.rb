@@ -22,3 +22,6 @@ class DocumentaryController < ApplicationController
     params.require(:documentary).permit(:name, :synopsis, :director)
   end
 end
+def index
+  @documentaries = Documentary.all
+end

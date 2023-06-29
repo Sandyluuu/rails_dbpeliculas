@@ -1,0 +1,12 @@
+<h1>Series</h1>
+
+<div class='row'>
+  <%= link_to "Nuevo", new_series_path, class: "btn btn-success col-3 offset-md-9" %>
+  <%# <button type="button" class="btn btn-success col-3 offset-md-9"> Nuevo </button> %>
+</div>
+
+<ul>
+  <% @series.each do |serie| %>
+    <li><%= serie.name %> - <%= serie.director %></li>
+  <% end %>
+</ul>

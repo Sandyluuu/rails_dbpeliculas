@@ -23,3 +23,8 @@ class MoviesController < ApplicationController
   end
 end
 
+def index
+  @movies = Movie.all
+end
+
+

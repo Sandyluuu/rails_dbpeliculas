@@ -1,0 +1,12 @@
+<h1>Documentary Films</h1>
+
+<div class='row'>
+  <%= link_to "Nuevo", new_documentary_path, class: "btn btn-success col-3 offset-md-9" %>
+  <%# <button type="button" class="btn btn-success col-3 offset-md-9"> Nuevo </button> %>
+</div>
+
+<ul>
+  <% @documentaries.each do |documentary| %>
+    <li><%= documentary.name %> - <%= documentary.director %></li>
+  <% end %>
+</ul>
