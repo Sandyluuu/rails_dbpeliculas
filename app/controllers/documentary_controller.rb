@@ -1,12 +1,12 @@
 class DocumentaryController < ApplicationController
   def index
-    @documentarys = Documentary.all
+    @documentaries = Documentary.all
   end
 
   def create
     @documentary = Documentary.new(documentary_params)
     if @documentary.save
-      redirect_to documentarys_path, notice: "Documental creado correctamente."
+      redirect_to documentary_index_path, notice: "Documental creado correctamente."
     else
       render :new
     end
