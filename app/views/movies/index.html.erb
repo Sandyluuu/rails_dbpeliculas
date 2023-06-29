@@ -3,10 +3,24 @@
 
 <div class='row'>
   <%= link_to "Nuevo", new_movie_path, class: "btn btn-success col-3 offset-md-9" %>
-  <%# <button type="button" class="btn btn-success col-3 offset-md-9"> Nuevo </button> %>
 </div>
-<ul>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Director</th>
+      <th scope="col">Synopsis</th>
+    </tr>
+  </thead>
+  <tbody>
+
   <% @movies.each do |movie| %>
-    <li><%= movie.name %> - <%= movie.director %></li>
+    <tr>
+      <td> <%= movie.name %> </td>
+      <td>  <%= movie.director %> </td>
+      <td>  <%= movie.synopsis %> </td>
+    </tr>
   <% end %>
-</ul>
+  </tbody>
+  </table>

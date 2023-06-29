@@ -5,8 +5,22 @@
   <%# <button type="button" class="btn btn-success col-3 offset-md-9"> Nuevo </button> %>
 </div>
 
-<ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Director</th>
+      <th scope="col">Synopsis</th>
+    </tr>
+  </thead>
+  <tbody>
+
   <% @documentaries.each do |documentary| %>
-    <li><%= documentary.name %> - <%= documentary.director %></li>
+    <tr>
+      <td> <%= documentary.name %> </td>
+      <td>  <%= documentary.director %> </td>
+      <td>  <%= documentary.synopsis %> </td>
+    </tr>
   <% end %>
-</ul>
+  </tbody>
+  </table>
